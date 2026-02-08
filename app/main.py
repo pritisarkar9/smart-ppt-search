@@ -7,7 +7,7 @@ app = FastAPI(title="Smart PPT Search")
 
 app.include_router(llm_router,prefix="/api")
 
-app.include_router(search_router, prefix="/api")
+#app.include_router(search_router, prefix="/api")
 
 
 @app.get("/")

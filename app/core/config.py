@@ -7,7 +7,7 @@ print(Path(".env").exists())
 BASEDIR = Path(__file__).resolve().parent.parent.parent
 
 class Setting(BaseSettings):
-    model_config=SettingsConfigDict(env_file=BASEDIR/".env")
+    model_config=SettingsConfigDict(env_file=BASEDIR / ".env", extra="ignore")
     GROQ_API_KEY: str
     MODEL_NAME: str = 'llama3-70b-8192'
 
